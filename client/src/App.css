@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  width: 760px;
+  margin: 0 auto;
+}
+
+.formulario-enviado{
+  color: green;
+}
+.errores-form{
+  color:red;
+}
+
+.formulario-registro{
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: fit-content;
+}
+
+.formulario-login{
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: fit-content;
+  padding: 10 px;
+}
+
+.main-registro{
+  display: flex;
+  flex-direction: row;
+  width: 260px;
+  padding: 10 px;
+}
+
+.formularios-registro{
+  display: flex;
+  flex-direction: row;
+  padding: 10 px;
+  justify-content: space-around;
+}
+
+.formularios-registro div{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+}
+

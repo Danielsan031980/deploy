@@ -88,12 +88,12 @@ const RegisterForm = (props) => {
                     <Field  id='direccion' type="text" placeholder="Direccion" className="form-control" name='direccion'/>
                     {errors.direccion && touched.direccion && <p>{errors.direccion}</p>}
                     <br></br>
-                    <button type="submit" class="btn btn-success border border-white" disabled={Object.values(errors).length > 0}>Registrarse</button>
+                    <button type="submit" className="btn btn-success border border-white" disabled={Object.values(errors).length > 0}>Registrarse</button>
                 </Form>
                 </div>
         );
         }}
-        </Formik>
+        </Formik>f
         </div>
       );
     }

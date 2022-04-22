@@ -52,7 +52,7 @@ const LoginForm = (props) => {
                     <Field  id='password' type="password" placeholder="Contraseña" className={`form-control`} name='password'/>
                     {errors.password && touched.password && <p>{errors.password}</p>}
                     <br></br>
-                    <button type="submit" class="btn btn-success border border-white" disabled={Object.values(errors).length > 0} >Login</button>
+                    <button type="submit" className="btn btn-success border border-white" disabled={Object.values(errors).length > 0} >Login</button>
                 </Form>
                 </div>
         );

@@ -40,24 +40,24 @@ const Registerobject = (props) => {
                 
             }}
             validationSchema={ Yup.object().shape({
-                   pirateName: Yup.string()
-                   .min(3,"Pirate name too short")
-                   .max(30,"Pirate name too long")
-                   .required("Please write your name"),
-                   image: Yup.string()
-                   .required("Please write your url image"),                
-                   numberTreassures: Yup.number()
-                   .min(1,"Treassure Description too short")
-                   .required("Please write treassure number"),
-                   piratePhrase: Yup.string()
-                   .min(3,"Pirate Phrase Description name too short")
-                   .required("Please write Pirate Phrase"),
-                   crewPosition: Yup.string()
-                   .min(3,"Crew position  too short")
-                   .required("Please write crew position"),
-                   pedLeg:Yup.boolean(),
-                   eyePatch:Yup.boolean(),
-                   hookHand:Yup.boolean()
+                //    pirateName: Yup.string()
+                //    .min(3,"Pirate name too short")
+                //    .max(30,"Pirate name too long")
+                //    .required("Please write your name"),
+                //    image: Yup.string()
+                //    .required("Please write your url image"),                
+                //    numberTreassures: Yup.number()
+                //    .min(1,"Treassure Description too short")
+                //    .required("Please write treassure number"),
+                //    piratePhrase: Yup.string()
+                //    .min(3,"Pirate Phrase Description name too short")
+                //    .required("Please write Pirate Phrase"),
+                //    crewPosition: Yup.string()
+                //    .min(3,"Crew position  too short")
+                //    .required("Please write crew position"),
+                //    pedLeg:Yup.boolean(),
+                //    eyePatch:Yup.boolean(),
+                //    hookHand:Yup.boolean()
 
             })}
             onSubmit={(values,{ setSubmitting, resetForm })=>{

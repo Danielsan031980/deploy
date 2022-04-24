@@ -8,8 +8,6 @@ module.exports.getAllApi = (req, res) => {
 };
 
 module.exports.createPirate = (req, res) => {
-
-
   Api.create(req.body)
     .then(newlyCreatedApi => res.json({ api: newlyCreatedApi }))
     .catch(err => res.status(400).json(err));
@@ -68,7 +66,7 @@ module.exports.createP = async(req,res)=>{
       const pirata = await Api.find({crewPosition:"Captain"}).exec();
       if (pirata.length===1 && req.body.crewPosition === "Captain"){
           res
-          .status(500)
+          .status(400)
           .json({ errors: { error: { message: " Captain alredy exist" } } });
       }else{
           const pirata = new Api(req.body);
@@ -78,6 +76,6 @@ module.exports.createP = async(req,res)=>{
       }
 
   }catch(error){
-      res.status(500).json(err);
+      res.status(400).json(error);
   }
 }

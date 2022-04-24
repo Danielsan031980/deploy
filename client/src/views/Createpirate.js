@@ -18,6 +18,7 @@ const Createpirate = (props) => {
             }
             // Set Errors
             setErrors(errorArr);
+            console.log(errorArr)
         }) 
         
     }

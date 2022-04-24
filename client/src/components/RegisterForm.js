@@ -34,7 +34,7 @@ const RegisterForm = (props) => {
             .min(8, "La clave debe contener más de 8 caractes")
             .required("Por favor ingrese una contraseña"),
             
-            confirmpassword: Yup.string()
+            confirmPassword: Yup.string()
             .equals([Yup.ref('pass'), null], "las contraseñas no son iguales")
             .min(8, "La clave debe contener más de 8 caractes")
             .required("Por favor ingrese la confirmación de la contraseña"),
@@ -43,9 +43,10 @@ const RegisterForm = (props) => {
         })}
 
         onSubmit={(values, {setSubmitting}) =>{
+            console.log("aqui")
+            onSubmitProp(values);
+            setSubmitting(false);
             const timeOut = setTimeout(( )=>{
-                onSubmitProp(values);
-                setSubmitting(false);
                 clearTimeout(timeOut);
             }, 1000);
         }}
@@ -89,12 +90,12 @@ const RegisterForm = (props) => {
                     <Field  id='direccion' type="text" placeholder="Direccion" className="form-control" name='direccion'/>
                     {errors.direccion && touched.direccion && <p>{errors.direccion}</p>}
                     <br></br>
-                    <button type="submit" className="btn btn-success border border-white" disabled={Object.values(errors).length > 0}>Add a Pirate</button>
+                    <button type="submit" className="btn btn-success border border-white" >Register</button>
                 </Form>
                 </div>
         );
         }}
-        </Formik>f
+        </Formik>
         </div>
       );
     }

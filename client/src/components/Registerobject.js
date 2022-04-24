@@ -64,9 +64,9 @@ const Registerobject = (props) => {
                 setSubmitting(false);
                 onSubmitProp(values)  
                 // navigate('/') 
+                setFormstatus(true)
                 setTimeout(()=>{ 
                     resetForm() 
-                    setFormstatus(true)
                 }, 10000)
             }}
             >
@@ -139,7 +139,6 @@ const Registerobject = (props) => {
                                     
                         
                                 </Form>  
-                                {formstatus && <p className="formulario-enviado">formulario enviado</p>}
                             </div>
                         )
                     }}
@@ -148,6 +147,7 @@ const Registerobject = (props) => {
 
             <div className="errores-form">
             </div>
+                    {formstatus && <p className="formulario-enviado">formulario enviado</p>}
             
         </div>
     );

@@ -8,8 +8,6 @@ const Mainformslog = () => {
         <div className="formularios-registro">
             <Register/>
             <Login/>
-            {/* <Registerobject/> */}
-            
         </div>
     );
 }

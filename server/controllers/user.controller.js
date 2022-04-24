@@ -4,31 +4,35 @@ const jwt = require("jsonwebtoken");
 
 module.exports.Register = async (req, res) => {
     try {
+      
       const user = new User(req.body);
       await user.save();
   
       const jwtToken = jwt.sign({ _id: user._id }, process.env.SECRET_KEY);
-  
+      
       return res
         .cookie("usertoken", jwtToken, process.env.SECRET_KEY, {
           httpOnly: true,
         })
         .json({ email: user.email, _id: user._id });
     } catch (err) {
+      console.log(err)
       res.status(400).json(err);
     }
   };
 
   module.exports.Login = async (req, res) => {
-    try {
-      
-      const user = await User.findOne({ email: req.body.email });
-      
+    try {   
+      const user = await User.findOne({ email: req.body.email })
+      .then(
+      )
+      .catch(err => res.json({ message: "Something went wrong", error: err }));
       if (user === null) {
         res
           .status(400)
           .json({ errors: { error: { message: "El usuario no existe" } } });
       }
+
       
       const correctPassword = await bcrypt.compare(
         req.body.pass,

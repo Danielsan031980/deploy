@@ -20,24 +20,24 @@ const RegisterForm = (props) => {
           confirmPassword:iConfirm,
         }}
         validationSchema={Yup.object().shape({
-            // name: Yup.string()
-            // .min(3, "Tu nombre es muy corto")
-            // .required ("Por favor ingresa tu nombre"),
+            name: Yup.string()
+            .min(3, "Tu nombre es muy corto")
+            .required ("Por favor ingresa tu nombre"),
                        
-            // mail: Yup.string()
-            // .email("Correo no valido")
-            // .min(3, "Este correo electrónico es incorrecto")
-            // .required("Por favor, ingresa un correo electrónico válido"),
+            mail: Yup.string()
+            .email("Correo no valido")
+            .min(3, "Este correo electrónico es incorrecto")
+            .required("Por favor, ingresa un correo electrónico válido"),
             
-            //  pass: Yup.string()
-            //  .equals([Yup.ref('confirmPassword'), null], "las contraseñas no son iguales")
-            // .min(8, "La clave debe contener más de 8 caractes")
-            // .required("Por favor ingrese una contraseña"),
+             pass: Yup.string()
+             .equals([Yup.ref('confirmPassword'), null], "las contraseñas no son iguales")
+            .min(8, "La clave debe contener más de 8 caractes")
+            .required("Por favor ingrese una contraseña"),
             
-            // confirmpassword: Yup.string()
-            // .equals([Yup.ref('pass'), null], "las contraseñas no son iguales")
-            // .min(8, "La clave debe contener más de 8 caractes")
-            // .required("Por favor ingrese la confirmación de la contraseña"),
+            confirmpassword: Yup.string()
+            .equals([Yup.ref('pass'), null], "las contraseñas no son iguales")
+            .min(8, "La clave debe contener más de 8 caractes")
+            .required("Por favor ingrese la confirmación de la contraseña"),
 
 
         })}
@@ -61,9 +61,10 @@ const RegisterForm = (props) => {
             }) =>{
         return (
             
-            <div className= "ventana-registro">
-                <h1 className="col-sm-6 " >REGISTRO</h1>
+            <div className= "ventana-registro container">
+                <h1 className="col-3 " >REGISTRO</h1>
                 <Form className="form-group formulario-registro p-3 mb-2 bg-secondary text-white " method= "post" onSubmit={handleSubmit}>
+
                     <label htmlFor="name" className="col-sm-12">Nombre</label>
                     <Field id='name'type="text" className="form-control" placeholder="Nombre" name='name'/>
                     {errors.name && touched.name && <p>{errors.name}</p>}
@@ -88,7 +89,7 @@ const RegisterForm = (props) => {
                     <Field  id='direccion' type="text" placeholder="Direccion" className="form-control" name='direccion'/>
                     {errors.direccion && touched.direccion && <p>{errors.direccion}</p>}
                     <br></br>
-                    <button type="submit" className="btn btn-success border border-white" disabled={Object.values(errors).length > 0}>Registrarse</button>
+                    <button type="submit" className="btn btn-success border border-white" disabled={Object.values(errors).length > 0}>Add a Pirate</button>
                 </Form>
                 </div>
         );

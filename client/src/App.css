@@ -1,7 +1,8 @@
 .App {
   text-align: center;
-  width: 760px;
+  width: 760px !important;
   margin: 0 auto;
+  background-color: #F5821A;
 }
 
 .formulario-enviado{
@@ -46,4 +47,100 @@
   flex-direction: column;
   width: 260px;
 }
+.ventana-formulario-data{
+  width: 860px;
 
+}
+
+.selector{
+  width: 260px;
+}
+
+.form-divitions{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 660px;
+}
+img {
+  width: 160px;
+  height: 150px;
+}
+
+li div{
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+
+li{
+  list-style: none;
+  margin-top: 15px;
+  width: 660px ;
+}
+
+
+ul{
+  
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.main-list-pirates{
+}
+
+
+.classh1{
+  color:white !important;
+  width: 460px !important;
+  display:inline-block !important;
+  margin-left: 80px;
+  margin-top: 10px!important;
+  font-size: 30px !important;
+}
+
+.navegation-tittle{
+  display: flex;
+  justify-content:space-around;
+  background-color: brown;
+  align-content: center;
+}
+
+.button_color{
+  background-color: #075394 !important;
+  color: white;
+  height: 35px;
+  box-shadow: 2px 2px black;
+}
+.button_color2{
+  background-color: #CF2A27 !important;
+  color: white;
+  height: 35px;
+  box-shadow: 2px 2px black;
+}
+
+
+.button3-colortrue{
+  background-color: red !important;
+}
+.button3-colorfalse{
+  background-color: green !important;
+ 
+}
+.button2-colortrue{
+  background-color: red !important;
+}
+.button2-colorfalse{
+  background-color: green !important;
+ 
+}
+.button1-colortrue{
+  background-color: red !important;
+}
+.button1-colorfalse{
+  background-color: green !important;
+ 
+}

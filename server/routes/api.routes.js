@@ -4,13 +4,13 @@ const authenticate = require('../config/authenticate');
 
 module.exports = app => {
 
-    app.post("/api/pelicula/create/", ApiController.createApi);
-    app.get("/api/peliculas/", ApiController.getAllApi);
-    app.get("/api/pelicula/:id", ApiController.getSingleApi);
-    app.delete("/api/pelicula/delete/:id", ApiController.deleteApi);
-    app.put("/api/pelicula/update/:id", ApiController.updateApi);
-
-
+    app.post("/api/pirate/create/", ApiController.createP);
+    // app.post("/api/pirate/create/", ApiController.createPirate);
+    app.get("/api/pirates/", ApiController.getAllApi);
+    app.get("/api/pirate/:id", ApiController.getSingleApi);
+    app.delete("/api/pirate/delete/:id", ApiController.deleteApi);
+    app.put("/api/pirate/update/:id", ApiController.updateApi);
+    app.post("/api/pirate/changeSkill/:skill/:id",ApiController.changeSkill);
 
     app.post("/api/register", UserController.Register);
     app.post("/api/login", UserController.Login);

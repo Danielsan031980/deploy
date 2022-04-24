@@ -8,22 +8,21 @@ import {
 } from "react-router-dom";
 
 const Register = () => {
-
+    
     const [errors, setErrors] = useState([]); 
     const {setUser}=useUser();
     const navigate=useNavigate();
 
     const registerUser = user => {
-        axios.post('/api/register/', user)
+        const flagerrors = true
+        const prueba = axios.post('/api/register/', user)
             .then(res=>{
-                console.log(res.data);
                 axios.get(`/api/user/${res.data._id}`, {withCredentials: true})
                 .then(res=>{
                     setUser(res.data);
                     navigate("/");
                 })
                 .catch(err=>{
-                    console.error(err);
                     return { success: false, data: err.message };
                 })
                 

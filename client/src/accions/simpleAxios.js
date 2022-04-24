@@ -4,8 +4,7 @@ import axios from 'axios';
 export async function simpleAxiosGet (url) {
     
     try{ 
-        const apiResponse = axios.get(url).then(response=>response.data);
-        console.log(apiResponse)
+        const apiResponse = axios.get(url).then(response=>response.data);      
         return apiResponse
     }catch(error){
         return {error:"se ha producido un error:" + error}
@@ -16,10 +15,9 @@ export async function simpleAxiosGet (url) {
 export async function simpleAxiosPost (url,body) {   
     try{
         const apiResponse = axios.post(url, body).then(response=>response.data)
-        
+        console.log(apiResponse)
         return apiResponse
     }catch(error){
-        console.log("pase por aqui 2")
         return {error:"se ha producido un error:" + error.json()}
     }
 
